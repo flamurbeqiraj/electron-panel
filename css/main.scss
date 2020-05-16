@@ -1,0 +1,104 @@
+$logoredcolor:		#f07950;
+$logobluecolor:		#464389;
+$logogreencolor:	#33a692;
+$darkgrey:          #cccccc;
+
+@font-face {
+    font-family: baloSemiBold;
+    src: url(../fonts/BalooBhai2-SemiBold.ttf);
+}
+@font-face {
+    font-family: baloRegular;
+    src: url(../fonts/BalooBhai2-Regular.ttf);
+}
+@font-face {
+    font-family: baloMedium;
+    src: url(../fonts/BalooBhai2-Medium.ttf);
+}
+@font-face {
+    font-family: baloBold;
+    src: url(../fonts/BalooBhai2-Bold.ttf);
+}
+@font-face {
+    font-family: baloExtraBold;
+    src: url(../fonts/BalooBhai2-ExtraBold.ttf);
+}
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: baloRegular;
+    background-color: $darkgrey;
+}
+
+//Pages content
+.page--loader {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.page--main, .page--members, .page--pyetsoret, .page--stafi, .page--toProfile {
+    display: none;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+//Pages content
+
+.mainCube {
+    text-align: center;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+.innerCube {
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    border-radius: 50%;
+    margin: 0px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0px;
+    transition: 0.2s;
+}
+.innerCube, .innerTitle {
+    cursor: pointer;
+}
+.mainCube:hover {
+    opacity: 1;
+    transition: 0.3s;
+}
+.innerCube i {
+    font-size: 35px;
+}
+.innerCube:hover {
+    border: 10px solid $logogreencolor;
+    transition: 0.2s;
+    color: $logogreencolor;
+}
+.innerTitle {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+#logoText {
+    display: none;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: clip;
+    font-size: 24px;
+    margin-left: 14px;
+    color: $logobluecolor;
+}
+.controls {
+    margin-top: 40px;
+}
+.backBtn {
+    padding-bottom: 2px;
+}
+.downLine {
+    padding-bottom: 15px;
+    border-bottom: 2px solid black;
+}

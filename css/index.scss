@@ -1,0 +1,42 @@
+$logoredcolor:		#f07950;
+$logobluecolor:		#464389;
+$logogreencolor:	#33a692;
+
+@font-face {
+    font-family: baloSemiBold;
+    src: url(../fonts/BalooBhai2-SemiBold.ttf);
+}
+@font-face {
+    font-family: baloRegular;
+    src: url(../fonts/BalooBhai2-Regular.ttf);
+}
+@font-face {
+    font-family: baloMedium;
+    src: url(../fonts/BalooBhai2-Medium.ttf);
+}
+@font-face {
+    font-family: baloBold;
+    src: url(../fonts/BalooBhai2-Bold.ttf);
+}
+@font-face {
+    font-family: baloExtraBold;
+    src: url(../fonts/BalooBhai2-ExtraBold.ttf);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: $logogreencolor;
+    font-family: baloRegular;
+}
+#logo {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-top: 105px;
+}
+#infoText {
+    display: table;
+    margin: 0px auto;
+    color: white;
+}

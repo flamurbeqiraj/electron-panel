@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>SIT Panel | Versioni: 1.0.0 BETA</title>
+        <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+        <link href="./css/all.css" rel="stylesheet">
+        <link href="./css/animate.css" rel="stylesheet">
+        <link href="./css/main.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="page--loader">
+            <img src="img/sit_logo.png">
+            <div id="logoText">
+                and Think
+            </div>
+        </div>
+        <div class="page--main">
+            <div class="container mainMenu">
+                <div class="row">
+                    <div class="col-md-3 mainCube" data-page="members">
+                        <div class="innerCube">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="innerTitle">
+                            ANËTARËT
+                        </div>
+                    </div>
+                    <div class="col-md-3 mainCube" data-page="pyetsoret">
+                        <div class="innerCube">
+                            <i class="fas fa-copy"></i>
+                        </div>
+                        <div class="innerTitle">
+                            PYETSORËT
+                        </div>
+                    </div>
+                    <div class="col-md-3 mainCube" data-page="stafi">
+                        <div class="innerCube">
+                            <i class="fas fa-user-edit"></i>
+                        </div>
+                        <div class="innerTitle">
+                            STAFI
+                        </div>
+                    </div>
+                    <div class="col-md-3 mainCube" data-page="toProfile">
+                        <div class="innerCube">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <div class="innerTitle">
+                            PROFILI IM
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page--members">
+            <div class="container controls">
+                <div class="row downLine">
+                    <div class="col-md-11">
+                        <h4>Anëtarët</h4>
+                    </div>
+                    <div class="col-md-1">
+                        <button class="btn btn-light backBtn"><i class="fas fa-bars"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page--pyetsoret">
+            <div class="container controls">
+                <div class="row downLine">
+                    <div class="col-md-11">
+                        <h4>Pyetsorët</h4>
+                    </div>
+                    <div class="col-md-1">
+                        <button class="btn btn-light backBtn"><i class="fas fa-bars"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <table id="example" class="display"npm install datatables.net>
+                            <thead>
+                                <tr>
+                                    <th>#ID</th>
+                                    <th>Titulli</th>
+                                    <th>Pershkrimi</th>
+                                    <th>Pyetjet</th>
+                                    <th>Administratori</th>
+                                    <th>Statusi</th>
+                                    <th>Data</th>
+                                    <th>Aksionet</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#1</td>
+                                    <td>Sa mendoni se janë njerëzit e përgjegjshëm ndaj virusit COVID-19?</td>
+                                    <td>Pershkrimi i pyetsorit...</td>
+                                    <td>3 pyetje</td>
+                                    <td>Flamur Beqiraj</td>
+                                    <td>Aktiv</td>
+                                    <td>15.06.2020 13:01</td>
+                                    <td>Edit Fshij</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page--stafi">
+            <div class="container controls">
+                <div class="row downLine">
+                    <div class="col-md-11">
+
+                    </div>
+                    <div class="col-md-1">
+                        <button class="btn btn-light backBtn"><i class="fas fa-bars"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page--toProfile">
+            <div class="container controls">
+                <div class="row downLine">
+                    <div class="col-md-11">
+
+                    </div>
+                    <div class="col-md-1">
+                        <button class="btn btn-light backBtn"><i class="fas fa-bars"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        window.$ = window.jQuery = require('jquery');
+        // var $ = require( 'jquery' );
+        require( 'datatables.net' )( window, $ );
+        // window.dt = require('./node_modules/datatables.net')();
+    </script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/requests.js"></script>
+    <script src="./js/main.js"></script>
+</html>
