@@ -1,5 +1,7 @@
 const elLoader  =  document.querySelector('.page--loader');
 const elPanel   =  document.querySelector('.page--main');
+const clickBTN = new Audio('./mp3/click-btn.mp3');
+const backBTN  = new Audio('./mp3/back-btn.mp3');
 var elCurrent	= '';
 var getWidth    = parseFloat($("#logoText").width()) + 2;
 $("#logoText").css({"width": "0px", "display": "block"});
@@ -20,6 +22,7 @@ setTimeout(function() {
 }, 4000);
 
 $(document).on("click", ".mainCube", function() {
+	clickBTN.play();
 	var thePage		= $(this).data("page");
 	elCurrent	= $('.page--'+thePage);
 	$(".page--main").fadeOut(100, function() {
@@ -27,6 +30,7 @@ $(document).on("click", ".mainCube", function() {
 	});
 });
 $(document).on("click", ".backBtn", function() {
+	backBTN.play();
 	elCurrent.fadeOut(100, function() {
 		$(".page--main").fadeIn(100);
 	});
