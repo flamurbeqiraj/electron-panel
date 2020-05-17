@@ -99,6 +99,73 @@ html, body {
     padding-bottom: 2px;
 }
 .downLine {
-    padding-bottom: 15px;
+    padding-bottom: 5px;
     border-bottom: 2px solid black;
+}
+#pyetsoriTable {
+    border-radius: 10px;
+    overflow: hidden;
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 12px;
+    background-color: #dedede;
+}
+#pyetsoriTable td, #pyetsoriTable th {
+    padding: 8px;
+    max-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+#pyetsoriTable tr:nth-child(even){background-color: #f2f2f2;}
+#pyetsoriTable tr:hover {background-color: #ddd;}
+#pyetsoriTable th {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+.searchInp {
+    padding: 4px 10px 2px 10px;
+    border: 0;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    outline: none;
+}
+
+.float-right {
+    float: right;
+}
+
+.float-left {
+    float: left;
+}
+
+.btn-extra-small {
+    font-size: 12px;
+    padding: 3px 6px 1px 6px;
+}
+
+.infoPezull {
+    background-color: #ffae42;
+    color: white;
+    padding: 2px 4px 0px 4px;
+    border-radius: 4px;
+    box-shadow: 1px 1px 2px #888888;
+}
+.infoFshire {
+    background-color: #d63447;
+    color: white;
+    padding: 2px 4px 0px 4px;
+    border-radius: 4px;
+    box-shadow: 1px 1px 2px #888888;
+}
+.infoAprovuar {
+    background-color: #4caf50;
+    color: white;
+    padding: 2px 4px 0px 4px;
+    border-radius: 4px;
+    box-shadow: 1px 1px 2px #888888;
 }

@@ -5,6 +5,7 @@
         <title>SIT Panel | Versioni: 1.0.0 BETA</title>
         <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
         <link rel="stylesheet" href="./css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
         <link href="./css/all.css" rel="stylesheet">
         <link href="./css/animate.css" rel="stylesheet">
         <link href="./css/main.css" rel="stylesheet">
@@ -81,17 +82,21 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <table id="example" class="display"npm install datatables.net>
+                        <div class="float-right">
+                            <span>Kërko:</span> <input type="text" class="searchInp" placeholder="#ID, Titull...">
+                        </div>
+                        <div style="clear:both"></div>
+                        <table id="pyetsoriTable" class="display">
                             <thead>
                                 <tr>
-                                    <th>#ID</th>
+                                    <th style="width: 60px;">#ID</th>
                                     <th>Titulli</th>
                                     <th>Pershkrimi</th>
-                                    <th>Pyetjet</th>
-                                    <th>Administratori</th>
-                                    <th>Statusi</th>
-                                    <th>Data</th>
-                                    <th>Aksionet</th>
+                                    <th style="width: 65px;">Pyetjet</th>
+                                    <th style="width: 120px;">Administratori</th>
+                                    <th style="width: 90px;">Statusi</th>
+                                    <th style="width: 110px;">Data</th>
+                                    <th style="width: 70px;">Aksionet</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -138,9 +143,14 @@
     </body>
     <script>
         window.$ = window.jQuery = require('jquery');
-        // var $ = require( 'jquery' );
-        require( 'datatables.net' )( window, $ );
-        // window.dt = require('./node_modules/datatables.net')();
+        var mysql = require('mysql');
+        import Swal from 'sweetalert2';
+        Swal.fire({
+            title: 'Error!',
+            text: 'Do you want to continue',
+            icon: 'error',
+            confirmButtonText: 'Cool'
+        });
     </script>
     <script src="./js/popper.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
