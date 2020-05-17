@@ -2,6 +2,8 @@ const elLoader  =  document.querySelector('.page--loader');
 const elPanel   =  document.querySelector('.page--main');
 const clickBTN = new Audio('./mp3/click-btn.mp3');
 const backBTN  = new Audio('./mp3/back-btn.mp3');
+require('dotenv').config()
+
 var elCurrent	= '';
 var getWidth    = parseFloat($("#logoText").width()) + 2;
 $("#logoText").css({"width": "0px", "display": "block"});
@@ -29,12 +31,13 @@ $(document).on("click", ".mainCube", function() {
 		elCurrent.fadeIn(100);
 	});
 
+	console.log(process.env.REMOTE_HOST);
 	if (thePage == 'pyetsoret') {
 		var connection = mysql.createConnection({
-            host: "localhost",
-            user: "root",
-            password: null,
-            database: "sit"
+            host: process.env.REMOTE_HOST,
+            user: process.env.REMOTE_USER,
+            password: process.env.REMOTE_PASS,
+            database: process.env.REMOTE_DB
         });
         connection.connect((err) => {
             if(err) {
