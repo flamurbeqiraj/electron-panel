@@ -30,6 +30,10 @@ html, body {
   background-color: #cccccc;
 }
 
+body {
+  padding: 40px;
+}
+
 .page--loader {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -51,6 +55,24 @@ html, body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.page--allDialogs {
+  z-index: 99999;
+  padding: 40px;
+  display: none;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.9);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.page--allDialogs--inner {
+  background-color: white;
+  border-radius: 30px;
+  padding: 20px 20px;
 }
 
 .mainCube {
@@ -115,10 +137,6 @@ html, body {
   font-size: 24px;
   margin-left: 14px;
   color: #464389;
-}
-
-.controls {
-  margin-top: 40px;
 }
 
 .backBtn {
@@ -210,5 +228,34 @@ html, body {
   border-radius: 4px;
   -webkit-box-shadow: 1px 1px 2px #888888;
           box-shadow: 1px 1px 2px #888888;
+}
+
+.closeDialogBtn {
+  color: #dadada;
+  font-size: 35px;
+  padding: 8px 18px 0px 18px;
+  border-radius: 50%;
+  border: 0;
+  background-color: rgba(255, 255, 255, 0.4);
+  outline: none;
+}
+
+.closeDialogBtn:hover {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.6);
+  outline: none;
+}
+
+.closeDialogBtn:focus {
+  outline: none;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.6);
+  outline: none;
+}
+
+.closeDialogBtn:active {
+  outline: none;
+  -webkit-box-shadow: inset 0 0 10px #000000;
+  box-shadow: inset 0 0 10px #000000;
 }
 /*# sourceMappingURL=main.css.map */

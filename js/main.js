@@ -40,7 +40,7 @@ $(document).on("click", ".mainCube", function() {
             if(err) {
                 return console.log(err.stack);
             }
-            console.log("Connection successfuly established");
+            // console.log("Connection successfuly established");
         });
         connection.query('SELECT p.*, a.emri, (SELECT count(id) FROM `data_aa_pyetjet` WHERE id_pyetsori=p.id) AS pnr FROM `data_aa_pyetsori` p INNER JOIN `data_aa_admin` a ON a.id=p.id_adm_created', (err, rows, fields) => {
 			$("#pyetsoriTable > tbody").empty().html('<tr><td colspan="8" style="text-align: center;"><i class="fas fa-database"></i> Në pritje të përgjigjes nga databaza...</td></tr>');
@@ -49,7 +49,7 @@ $(document).on("click", ".mainCube", function() {
 				$("#pyetsoriTable > tbody").empty().html('<tr><td colspan="8" style="text-align: center;"><i class="fas fa-exclamation-circle"></i> Lidhja u refuzua, një raport është dërguar tek zhvilluesi.</td></tr>');
             } else {
 				$("#pyetsoriTable > tbody").empty();
-				console.log(rows);
+				// console.log(rows);
 				$.each(rows, function(k, v) {
 					var themonth = v.data_create.getUTCMonth() + 1; //months from 1-12
 					var theday = v.data_create.getUTCDate();
@@ -73,12 +73,12 @@ $(document).on("click", ".mainCube", function() {
 						  doStatus = '<span class="infoFshire">GABIM</span>';
 					}
 
-					$("#pyetsoriTable > tbody").append('<tr><td>#'+v.id+'</td><td>'+v.titulli+'</td><td>'+v.pershkrimi+'</td><td>'+v.pnr+'</td><td>'+v.emri+'</td><td>'+doStatus+'</td><td>'+thenewdate+'</td><td><div class="btn-group" role="group" aria-label="Basic example"><button type="button" class="btn btn-primary btn-extra-small"><i class="fas fa-pen"></i></button></button><button type="button" class="btn btn-danger btn-extra-small"><i class="fas fa-trash"></i></button></div></td></tr>');
+					$("#pyetsoriTable > tbody").append('<tr><td>#'+v.id+'</td><td>'+v.titulli+'</td><td>'+v.pershkrimi+'</td><td>'+v.pnr+'</td><td>'+v.emri+'</td><td>'+doStatus+'</td><td>'+thenewdate+'</td><td><div class="btn-group" role="group" aria-label="Basic example"><button type="button" class="btn btn-primary btn-extra-small editPyetsori"><i class="fas fa-pen"></i></button><button type="button" data-id="'+v.id+'" class="btn btn-danger btn-extra-small removePyetsor"><i class="fas fa-trash"></i></button></div></td></tr>');
 				});
 			}
         });
         connection.end(() => {
-            console.log("Connection successfuly closed");
+            // console.log("Connection successfuly closed");
         });
 	}
 });
@@ -89,6 +89,34 @@ $(document).on("click", ".backBtn", function() {
 	});
 });
 
-$(document).ready( function () {
+$(document).on("click", ".removePyetsor", function() {
+	var element= $(this);
+	var mainid = $(this).data('id');
 
+	Swal.fire({
+		title: 'Aprovim',
+		html: "Konfirmoni fshirjen e pyetsorit <b>#"+mainid+"</b> me 'PO'!",
+		icon: 'warning',
+		showCancelButton: true,
+		confirmButtonText: 'PO',
+		cancelButtonText: 'ANULO'
+	}).then((result) => {
+		if (result.value) {
+			element.closest('tr').remove();
+			Swal.fire({
+				title: 'Aprovuar',
+				html: "Pyetsori është fshirë me sukses.",
+				icon: 'success',
+				confirmButtonText: 'Në rregull',
+				timer: 1500
+			});
+		}
+	});
+});
+
+$(document).on("click", ".editPyetsori", function() {
+	var mainid = $(this).data('id');
+	$(".page--allDialogs").fadeIn().promise().done(function() {
+		
+	});
 });
