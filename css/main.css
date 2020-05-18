@@ -57,6 +57,10 @@ body {
           align-items: center;
 }
 
+.page--inner--pyetsoret {
+  display: none;
+}
+
 .page--allDialogs {
   z-index: 99999;
   padding: 40px;

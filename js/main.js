@@ -119,7 +119,16 @@ $(document).on("click", ".removePyetsor", function() {
 
 $(document).on("click", ".editPyetsori", function() {
 	var mainid = $(this).data('id');
+	$(".page--inner--pyetsoret").show();
 	$(".page--allDialogs").fadeIn().promise().done(function() {
 		
+	});
+});
+
+//Close all pages at once
+$(document).on("click", ".closeDialogBtn", function() {
+	$(".page--allDialogs").fadeOut().promise().done(function() {
+		//Here just add the other popups
+		$(".page--inner--pyetsoret").hide();
 	});
 });
