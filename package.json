@@ -9,7 +9,7 @@
   "author": "Flamur Beqiraj",
   "license": "MIT",
   "devDependencies": {
-    "electron": "^9.4.0"
+    "electron": "^13.6.6"
   },
   "dependencies": {
     "dotenv": "^8.2.0",
